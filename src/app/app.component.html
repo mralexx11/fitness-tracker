@@ -1,17 +1,30 @@
-<!--Temporary code start-->
-<style>
-  nav > a {
-    padding: 3px;
-    margin-bottom: 5px;
-  }
-  button {
-    width: 100px;
-  }
-</style>
-<nav fxLayoutAlign="center">
-  <a href="/"><button mat-raised-button><mat-icon>home</mat-icon></button></a>
-  <a href="/signup"><button mat-raised-button><mat-icon>device_unknown</mat-icon></button></a>
-  <a href="/login"><button mat-raised-button><mat-icon>perm_identity</mat-icon></button></a>
-</nav>
-<!--Temporary code end-->
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+  <p>hello!</p>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <a routerLink="/">LOGO</a>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end">
+        <ul fxLayout fxLayoutGap="10px" class="nav-items">
+          <li><a routerLink="/signup">signup</a></li>
+          <li><a routerLink="/login">login</a></li>
+          <li><a routerLink="/training">training</a></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+<!--    <button mat-raised-button><mat-icon>menu</mat-icon></button>-->
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
