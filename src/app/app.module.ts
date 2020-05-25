@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { MaterialModule} from './modules/material/material.module';
@@ -11,7 +13,8 @@ import { CurrentTrainingComponent } from './training/current-training/current-tr
 import { NewTrainingComponent } from './training/new-training/new-training.component';
 import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {AppRoutingModule} from './modules/app-routing.module';
+import { AppRoutingModule } from './modules/app-routing.module';
+
 
 
 @NgModule({
@@ -29,7 +32,9 @@ import {AppRoutingModule} from './modules/app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
